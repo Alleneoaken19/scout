@@ -1,0 +1,151 @@
+{
+  "_comment": "Country → location patterns. Used by the UI to offer one-click country exclusions. Each entry is a list of substrings (or short tokens) that gets matched case-insensitively against the job's location field. Tokens of 4+ chars are matched as substrings; shorter tokens (country codes like 'uk', 'us') are matched with word boundaries so they don't false-positive on cities like 'Berlin' or 'Boston'.",
+
+  "India": [
+    "india",
+    "mumbai", "delhi", "new delhi", "bengaluru", "bangalore", "hyderabad",
+    "chennai", "kolkata", "pune", "ahmedabad", "jaipur", "surat", "lucknow",
+    "kanpur", "nagpur", "indore", "thane", "bhopal", "visakhapatnam", "patna",
+    "vadodara", "ghaziabad", "ludhiana", "agra", "nashik", "faridabad",
+    "meerut", "rajkot", "kalyan", "vasai", "varanasi", "srinagar", "aurangabad",
+    "dhanbad", "amritsar", "navi mumbai", "allahabad", "ranchi", "howrah",
+    "coimbatore", "jabalpur", "gurgaon", "gurugram", "noida", "greater noida",
+    "kochi", "ernakulam", "thiruvananthapuram", "trivandrum", "mysuru", "mysore",
+    "mangalore", "vijayawada", "guwahati", "chandigarh", "gandhinagar",
+    "karnataka", "maharashtra", "tamil nadu", "kerala", "telangana",
+    "andhra pradesh", "gujarat", "rajasthan", "uttar pradesh", "west bengal",
+    "punjab, india", "haryana", "bihar", "odisha", "madhya pradesh", "jharkhand",
+    "chhattisgarh", "uttarakhand", "himachal pradesh", "assam"
+  ],
+
+  "Pakistan": [
+    "pakistan",
+    "karachi", "lahore", "islamabad", "faisalabad", "rawalpindi", "multan",
+    "hyderabad, pakistan", "peshawar", "quetta", "gujranwala", "sialkot",
+    "bahawalpur", "sargodha", "sukkur", "larkana", "sheikhupura", "jhang",
+    "rahim yar khan", "gujrat", "kasur", "okara", "mardan", "abbottabad",
+    "punjab, pakistan", "sindh", "balochistan", "khyber pakhtunkhwa",
+    "azad kashmir", "gilgit baltistan"
+  ],
+
+  "Bangladesh": [
+    "bangladesh",
+    "dhaka", "chittagong", "khulna", "rajshahi", "sylhet", "mymensingh",
+    "barisal", "rangpur", "comilla", "narayanganj", "gazipur"
+  ],
+
+  "Nigeria": [
+    "nigeria",
+    "lagos", "kano", "ibadan", "abuja", "port harcourt", "benin city",
+    "kaduna", "maiduguri", "zaria", "aba, nigeria", "jos, nigeria", "ilorin",
+    "oyo, nigeria", "enugu", "abeokuta", "warri", "calabar", "akure", "uyo", "owerri"
+  ],
+
+  "Philippines": [
+    "philippines",
+    "manila", "quezon city", "davao", "caloocan", "cebu", "zamboanga",
+    "antipolo", "pasig", "taguig", "valenzuela", "dasmariñas", "makati",
+    "bacoor", "muntinlupa", "general santos", "las piñas", "san jose del monte",
+    "cagayan de oro", "parañaque", "iloilo"
+  ],
+
+  "Mexico": [
+    "mexico", "méxico",
+    "mexico city", "ciudad de méxico", "cdmx", "guadalajara", "monterrey",
+    "puebla", "tijuana", "león", "juárez", "ciudad juárez", "torreón",
+    "querétaro", "san luis potosí", "mérida", "mexicali", "aguascalientes",
+    "cuernavaca", "saltillo", "hermosillo", "culiacán", "veracruz", "morelia",
+    "chihuahua", "cancún"
+  ],
+
+  "Brazil": [
+    "brazil", "brasil",
+    "são paulo", "sao paulo", "rio de janeiro", "brasília", "salvador",
+    "fortaleza", "belo horizonte", "manaus", "curitiba", "recife",
+    "porto alegre", "belém", "goiânia", "guarulhos", "campinas",
+    "são luís", "maceió", "natal", "campo grande", "teresina"
+  ],
+
+  "United Kingdom": [
+    "united kingdom", "uk",
+    "london", "birmingham", "manchester", "leeds", "glasgow", "liverpool",
+    "edinburgh", "bristol", "sheffield", "newcastle", "nottingham",
+    "cardiff", "belfast", "leicester", "coventry", "bradford", "stoke",
+    "wolverhampton", "plymouth", "southampton", "reading, uk", "derby",
+    "england", "scotland", "wales", "northern ireland"
+  ],
+
+  "Germany": [
+    "germany", "deutschland",
+    "berlin", "hamburg", "münchen", "munich", "köln", "cologne",
+    "frankfurt", "stuttgart", "düsseldorf", "leipzig", "dortmund", "essen",
+    "bremen", "dresden", "hannover", "nürnberg", "nuremberg", "duisburg"
+  ],
+
+  "France": [
+    "france",
+    "paris", "marseille", "lyon", "toulouse", "nice", "nantes",
+    "strasbourg", "montpellier", "bordeaux", "lille", "rennes", "reims",
+    "le havre", "saint-étienne", "toulon", "grenoble", "dijon", "angers",
+    "nîmes", "villeurbanne"
+  ],
+
+  "Spain": [
+    "spain", "españa",
+    "madrid", "barcelona", "valencia", "seville", "sevilla", "zaragoza",
+    "málaga", "murcia", "palma", "las palmas", "bilbao", "alicante",
+    "córdoba", "valladolid", "vigo"
+  ],
+
+  "Italy": [
+    "italy", "italia",
+    "rome", "roma", "milan", "milano", "naples", "napoli", "turin", "torino",
+    "palermo", "genoa", "genova", "bologna", "florence", "firenze",
+    "bari", "catania", "venice", "venezia", "verona"
+  ],
+
+  "Netherlands": [
+    "netherlands", "nederland",
+    "amsterdam", "rotterdam", "the hague", "utrecht", "eindhoven", "tilburg",
+    "groningen", "almere", "breda", "nijmegen"
+  ],
+
+  "United States": [
+    "united states", "usa",
+    "new york", "los angeles", "chicago", "houston", "phoenix", "philadelphia",
+    "san antonio", "san diego", "dallas", "san jose", "austin", "jacksonville",
+    "fort worth", "columbus", "charlotte", "san francisco", "indianapolis",
+    "seattle", "denver", "washington", "boston", "el paso", "nashville",
+    "detroit", "oklahoma city", "portland", "las vegas", "memphis", "louisville",
+    "baltimore", "milwaukee", "albuquerque", "tucson", "fresno", "sacramento",
+    "atlanta", "miami", "tampa", "orlando"
+  ],
+
+  "Canada": [
+    "canada",
+    "toronto", "montreal", "vancouver", "calgary", "edmonton", "ottawa",
+    "winnipeg", "quebec city", "hamilton", "kitchener", "london, ontario",
+    "victoria", "halifax", "windsor", "saskatoon", "regina"
+  ],
+
+  "Australia": [
+    "australia",
+    "sydney", "melbourne", "brisbane", "perth", "adelaide", "gold coast",
+    "newcastle, nsw", "canberra", "wollongong", "hobart", "geelong",
+    "townsville", "cairns", "darwin"
+  ],
+
+  "Singapore": [
+    "singapore"
+  ],
+
+  "United Arab Emirates": [
+    "united arab emirates", "uae",
+    "dubai", "abu dhabi", "sharjah", "ajman"
+  ],
+
+  "Saudi Arabia": [
+    "saudi arabia",
+    "riyadh", "jeddah", "mecca", "medina", "dammam", "khobar"
+  ]
+}

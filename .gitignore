@@ -1,0 +1,64 @@
+# Environment & secrets
+.env
+.env.local
+!.env.example
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+.pytest_cache/
+
+# Data & runtime (but keep static reference files)
+data/scout.db
+data/scout.log
+data/daemon.pid
+data/daemon.lock
+data/apply_log.jsonl
+data/scraper_health.json
+*.sqlite
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# User-specific config (contains personal data)
+config/answers/
+config/preferences.yaml
+config/settings.yaml
+config/api_token
+config/encryption.key
+config/credentials/
+resume/master.json
+resume/generated/
+
+# Personal / internal documents
+*.docx
+*.pdf
+scout_prd.md
+QA_AUDIT_REPORT.md
+CROSS_DOMAIN_AUDIT.md
+
+# Node
+ui/node_modules/
+ui/dist/
+
+# Bundled frontend (built from ui/)
+src/api/static/
+
+# Claude Code
+.claude/
+data/scout.db-shm
+data/scout.db-wal
+data/*.bak

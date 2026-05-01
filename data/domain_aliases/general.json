@@ -1,0 +1,54 @@
+{
+  "_comment": "Cross-domain general skill aliases. Map of canonical term -> list of common aliases. Used by ats_scorer.py to normalize JD/resume text before keyword matching.",
+
+  "chief executive officer": ["ceo"],
+  "chief financial officer": ["cfo"],
+  "chief technology officer": ["cto"],
+  "chief operating officer": ["coo"],
+  "chief information officer": ["cio"],
+  "chief marketing officer": ["cmo"],
+  "vice president": ["vp"],
+
+  "human resources": ["hr"],
+  "applicant tracking system": ["ats"],
+  "equal employment opportunity": ["eeo"],
+  "employee resource group": ["erg"],
+  "key performance indicator": ["kpi", "kpis"],
+  "return on investment": ["roi"],
+  "standard operating procedure": ["sop", "sops"],
+
+  "project management": ["pm"],
+  "project management professional": ["pmp"],
+  "certified scrum master": ["csm"],
+  "certified associate in project management": ["capm"],
+
+  "microsoft office": ["ms office", "office 365", "microsoft 365"],
+  "microsoft excel": ["excel", "ms excel"],
+  "microsoft word": ["word", "ms word"],
+  "microsoft powerpoint": ["powerpoint", "ppt", "ms powerpoint"],
+  "customer relationship management": ["crm", "salesforce", "hubspot"],
+  "enterprise resource planning": ["erp", "sap", "oracle"],
+
+  "business development": ["biz dev", "bd"],
+  "mergers and acquisitions": ["m&a", "mna"],
+  "profit and loss": ["p&l", "pnl"],
+  "strengths weaknesses opportunities threats": ["swot", "swot analysis"],
+  "business to business": ["b2b"],
+  "business to consumer": ["b2c"],
+
+  "six sigma": ["6 sigma", "lean six sigma"],
+  "total quality management": ["tqm"],
+
+  "data analysis": ["data analytics", "analytics"],
+  "business intelligence": ["bi"],
+  "supply chain management": ["scm", "supply chain"],
+  "accounts payable": ["ap", "a/p"],
+  "accounts receivable": ["ar", "a/r"],
+  "generally accepted accounting principles": ["gaap"],
+  "international financial reporting standards": ["ifrs"],
+  "certified public accountant": ["cpa"],
+
+  "occupational safety and health administration": ["osha"],
+  "personal protective equipment": ["ppe"],
+  "environmental health and safety": ["ehs", "eh&s"]
+}

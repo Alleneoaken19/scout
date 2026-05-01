@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  @page {
+    size: A4;
+    margin: 1.2cm 1.5cm;
+  }
+  body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 10pt;
+    line-height: 1.35;
+    color: #1a1a1a;
+    margin: 0;
+  }
+  a {
+    color: #1a1a1a;
+    text-decoration: underline;
+  }
+
+  /* Header */
+  h1 {
+    font-size: 18pt;
+    margin: 0 0 3px 0;
+    letter-spacing: 0.3px;
+  }
+  .contact {
+    font-size: 9pt;
+    color: #444;
+    margin-bottom: 8px;
+  }
+  .contact a {
+    color: #444;
+  }
+  .sep {
+    margin: 0 5px;
+    color: #999;
+  }
+
+  /* Section headings */
+  h2 {
+    font-size: 10pt;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 2px;
+    margin: 11px 0 6px 0;
+    color: #1a1a1a;
+  }
+
+  /* Summary */
+  .summary {
+    font-size: 9.5pt;
+    color: #333;
+    margin: 0 0 2px 0;
+    line-height: 1.4;
+  }
+
+  /* Experience */
+  .exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1px;
+  }
+  .exp-role {
+    font-weight: bold;
+    font-size: 10pt;
+  }
+  .exp-dates {
+    font-size: 9pt;
+    color: #555;
+    white-space: nowrap;
+    padding-left: 12px;
+  }
+  .exp-location {
+    font-size: 8.5pt;
+    color: #666;
+    margin-bottom: 1px;
+  }
+  ul {
+    margin: 2px 0 8px 0;
+    padding-left: 16px;
+  }
+  li {
+    margin-bottom: 1.5px;
+    font-size: 9.5pt;
+    line-height: 1.35;
+  }
+
+  /* Skills */
+  .skills-row {
+    font-size: 9.5pt;
+    margin-bottom: 1px;
+    line-height: 1.4;
+  }
+  .skills-row strong {
+    font-size: 9.5pt;
+  }
+
+  /* Projects */
+  .project {
+    font-size: 9.5pt;
+    margin-bottom: 2px;
+    line-height: 1.35;
+  }
+
+  /* Education & Certs */
+  .edu-entry {
+    font-size: 9.5pt;
+    margin-bottom: 3px;
+  }
+</style>
+</head>
+<body>
+
+<h1>{{ personal.name }}</h1>
+<div class="contact">
+  {{ personal.location }}
+  {% if personal.email %}<span class="sep">|</span><a href="mailto:{{ personal.email }}">{{ personal.email }}</a>{% endif %}
+  {% if personal.phone %}<span class="sep">|</span><a href="tel:{{ personal.phone }}">{{ personal.phone }}</a>{% endif %}
+  {% if personal.linkedin %}<span class="sep">|</span><a href="{{ personal.linkedin }}">{{ personal.linkedin | replace('https://', '') }}</a>{% endif %}
+  {% if personal.github %}<span class="sep">|</span><a href="{{ personal.github }}">{{ personal.github | replace('https://', '') }}</a>{% endif %}
+  {% if personal.website %}<span class="sep">|</span><a href="{{ personal.website }}">{{ personal.website | replace('https://', '') }}</a>{% endif %}
+</div>
+
+<h2>Summary</h2>
+<p class="summary">{{ summary }}</p>
+
+{% if experience %}
+<h2>Experience</h2>
+{% for exp in experience %}
+<div class="exp-header">
+  <span class="exp-role">{{ exp.role }} | {{ exp.company }}</span>
+  <span class="exp-dates">{{ exp.start_date | format_date }} &ndash; {{ exp.end_date | format_date }}</span>
+</div>
+{% if exp.location %}<div class="exp-location">{{ exp.location }}</div>{% endif %}
+<ul>
+  {% for bullet in exp.bullets %}
+  <li>{{ bullet }}</li>
+  {% endfor %}
+</ul>
+{% endfor %}
+{% endif %}
+
+{% if skills %}
+<h2>Skills</h2>
+{% for category, items in skills.items() %}
+<div class="skills-row"><strong>{{ category }}:</strong> {{ items | join(', ') }}</div>
+{% endfor %}
+{% endif %}
+
+{% if projects %}
+<h2>Projects</h2>
+{% for proj in projects %}
+<div class="project"><strong>{{ proj.name }}</strong> &mdash; {{ proj.description }}</div>
+{% endfor %}
+{% endif %}
+
+{% if education %}
+<h2>Education</h2>
+{% for edu in education %}
+<div class="edu-entry"><strong>{{ edu.degree }}</strong> &mdash; {{ edu.institution }}{% if edu.year %}, {{ edu.year }}{% endif %}</div>
+{% endfor %}
+{% endif %}
+
+{% if certifications %}
+<h2>Certifications & Leadership</h2>
+{% for cert in certifications %}
+<div class="edu-entry">{{ cert }}</div>
+{% endfor %}
+{% endif %}
+
+</body>
+</html>

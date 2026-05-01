@@ -1,0 +1,16 @@
+services:
+  scout:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - scout-data:/app/data
+      - scout-config:/app/config
+      - scout-resume:/app/resume
+    environment:
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY:-}
+
+volumes:
+  scout-data:
+  scout-config:
+  scout-resume:

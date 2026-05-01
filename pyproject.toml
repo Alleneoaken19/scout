@@ -1,0 +1,81 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scout"
+version = "1.0.0"
+description = "Automated Job Application Platform — scrape, score, tailor, and apply to jobs with AI. Works for any profession."
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.12"
+authors = [
+    {name = "Joel Kanyi", email = "joelkanyi98@gmail.com"},
+]
+keywords = ["jobs", "automation", "resume", "ai", "job-search", "career", "applications"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Office/Business",
+]
+dependencies = [
+    "anthropic",
+    "google-generativeai",
+    "python-jobspy",
+    "playwright",
+    "playwright-stealth",
+    "fastapi",
+    "uvicorn",
+    "sqlalchemy",
+    "apscheduler",
+    "notion-client",
+    "gspread",
+    "google-auth-oauthlib",
+    "google-api-python-client",
+    "weasyprint",
+    "python-docx",
+    "jinja2",
+    "resume-matcher",
+    "typer",
+    "rich",
+    "pydantic",
+    "httpx",
+    "beautifulsoup4",
+    "feedparser",
+    "pandas",
+    "plyer",
+    "pyyaml",
+    "python-dotenv",
+    "python-multipart",
+    "cryptography",
+    "pymupdf",
+]
+
+[project.urls]
+Homepage = "https://github.com/joelkanyi/scout"
+Repository = "https://github.com/joelkanyi/scout"
+Issues = "https://github.com/joelkanyi/scout/issues"
+
+[tool.setuptools]
+py-modules = ["cli"]
+packages = ["src", "src.scrapers", "src.ai", "src.ai.providers", "src.apply", "src.tracking", "src.integrations", "src.resume", "src.api"]
+
+[tool.setuptools.package-data]
+"src.api" = ["static/**/*"]
+"*" = ["data/**/*.json"]
+
+[project.scripts]
+scout = "cli:app"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "F", "W"]
+ignore = ["E501"]  # line length handled by formatter, not linter
